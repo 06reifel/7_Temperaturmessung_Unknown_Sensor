@@ -38,7 +38,7 @@ void loop()
 
     float resistanceNTC = voltageNTC / current;
 
-    float temperatureK = 1.0 / (A + B * (log(resistanceNTC)) + C * (pow(log(resistanceNTC), 3)));
+    float temperatureK = 1.0 / (A + B * (log(resistanceNTC)) + C * (pow(log(resistanceNTC), 3))); //A, B, C = Koeffizienten der Steinhart Gleichung
 
     temperatureC = temperatureK - 273.15;
 
